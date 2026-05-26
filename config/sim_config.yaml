@@ -1,0 +1,30 @@
+simulation:
+  duration_seconds: 3600
+  step_size: 1.0
+  seed: 42
+  area:
+    width_miles: 100.0
+    height_miles: 100.0
+
+nodes:
+  count: 1000
+
+mobility:
+  model: rpgm
+  num_groups: 20
+  group_speed_min_mps: 0.5
+  group_speed_max_mps: 13.4
+  pause_min_seconds: 0
+  pause_max_seconds: 300
+  max_deviation_miles: 1.25
+  deviation_model: uniform
+
+network:
+  radio_range_miles: 1.0
+  hysteresis_margin_pct: 0.10
+
+output:
+  format: json
+  output_dir: ./steering_output
+  snapshot_interval: 60
+  buffer_size: 100
